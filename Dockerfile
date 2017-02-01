@@ -6,7 +6,7 @@ MAINTAINER Brenton Horne <brentonhorne77@gmail.com>
 RUN dnf update -y && dnf groupinstall -y "RPM Development Tools" && dnf install -y bsdtar sudo hub wget vim git
 
 # Create user packager, add them to wheel group and edit /etc/sudoers so they can perform any action without entering password
-RUN useradd -m -g wheel packager && sed -i -e 's/#%wheel/%wheel/g' /etc/sudoers
+RUN useradd -m -g wheel packager && sed -i -e 's/# %wheel/%wheel/g' /etc/sudoers
 
 # Login to packager account
 USER packager
