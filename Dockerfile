@@ -15,6 +15,7 @@ RUN useradd -m -g wheel packager && sed -i -e 's/# %wheel/%wheel/g' /etc/sudoers
 USER packager
 
 # Install my Fedora shell scripts
+ENV HOME /home/packager
 ENV SCR $HOME/GitHub/mine/scripts
 ENV FS $SCR/fedora-scripts
 ENV ZSH $SCR/zsh-theme
