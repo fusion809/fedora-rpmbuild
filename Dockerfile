@@ -16,6 +16,7 @@ USER packager
 
 # Install my Fedora shell scripts
 ENV SCR $HOME/GitHub/mine/scripts
+ENV FS $SCR/fedora-scripts
 ENV ZSH $SCR/zsh-theme
 ENV OH $HOME/.oh-my-zsh
 ENV PLG $OH/plugins
