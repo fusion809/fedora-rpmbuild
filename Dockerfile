@@ -13,3 +13,5 @@ USER packager
 
 # Install my Fedora shell scripts
 RUN /bin/bash -c "$(wget -cqO- https://git.io/vrsNO)"
+
+RUN rpmdev-setuptree
