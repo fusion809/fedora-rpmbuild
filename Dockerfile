@@ -2,6 +2,9 @@
 FROM fedora:25
 MAINTAINER Brenton Horne <brentonhorne77@gmail.com>
 
+# Install dnf-plugins-core
+RUN dnf update -y && dnf install -y dnf-plugins-core
+
 # Update packages and install minimum packages required for full utility
 RUN dnf config-manager --add-repo http://download.opensuse.org/repositories/home:fusion809/Fedora_$(cat /etc/os-release | grep "VERSION_ID" | cut -d "=" -f 2)/home:fusion809.repo && dnf update -y && dnf groupinstall -y "RPM Development Tools" && dnf install -y bsdtar git hub openssh util-linux-user wget vim zsh
 
